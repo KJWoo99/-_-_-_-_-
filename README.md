@@ -1,51 +1,52 @@
-# 네이버 쇼핑 리뷰 감성 분류기
+# Naver Shopping Review Sentiment Classifier
 
-이 프로젝트는 네이버 쇼핑 리뷰 데이터를 사용하여 감성 분류를 수행하는 딥러닝 모델을 구현합니다. GRU(Gated Recurrent Unit) 네트워크를 사용하여 리뷰의 감성을 긍정 또는 부정으로 분류합니다.
+This project aims to classify sentiment in Naver Shopping review data using a deep learning model with a Gated Recurrent Unit (GRU) network. The model categorizes the sentiment of reviews as either positive or negative.
 
-## 주요 기능
+## 🌟 Key Features
 
-1. 네이버 쇼핑 리뷰 데이터 전처리
-2. GRU 기반의 텍스트 분류 모델 구현
-3. 모델 학습 및 평가
+- **Data Preprocessing:** Clean and prepare Naver Shopping review data.
+- **GRU-Based Model:** Implement a GRU-based text classification model.
+- **Model Training & Evaluation:** Train the model and evaluate its performance.
 
-## 사용된 기술
+## 🛠 Technologies Used
 
-- Python
-- PyTorch
-- Transformers (Hugging Face)
-- pandas
-- scikit-learn
+- **Python**
+- **PyTorch**
+- **Transformers** (Hugging Face)
+- **pandas**
+- **scikit-learn**
 
-## 데이터셋
+## 📦 Dataset
 
-네이버 쇼핑 리뷰 데이터셋을 사용합니다. 이 데이터셋은 리뷰 텍스트와 평점으로 구성되어 있습니다.
+The project utilizes the Naver Shopping review dataset, which includes review texts and corresponding ratings.
 
-## 모델 구조
+## 🏗 Model Architecture
 
-- 임베딩 레이어
-- 양방향 GRU 레이어
-- 완전연결 레이어
+- **Embedding Layer:** Converts words into dense vectors.
+- **Bidirectional GRU Layer:** Processes text sequences in both directions.
+- **Fully Connected Layer:** Produces the final sentiment classification.
 
-## 설치 방법
+## 🚀 Installation
 
-필요한 라이브러리를 설치합니다:
+To install the required libraries, run:
+```bash
 pip install torch torchvision torchaudio transformers pandas scikit-learn
-Copy
-## 사용 방법
+```
+## 🚀 Usage
 
-1. 데이터 다운로드 및 전처리
-2. 데이터셋 및 데이터로더 생성
-3. 모델 초기화
-4. 모델 학습
-5. 모델 평가
+1. **Download and Preprocess Data:** Obtain and clean the dataset.
+2. **Create Dataset & DataLoader:** Prepare the data for training.
+3. **Initialize the Model:** Set up the GRU classifier.
+4. **Train the Model:** Fit the model to the training data.
+5. **Evaluate the Model:** Assess performance on the test set.
 
-## 주요 구성 요소
+## 🧩 Main Components
 
-1. `NaverShoppingDataset`: 커스텀 데이터셋 클래스
-2. `GRUClassifier`: GRU 기반 분류 모델
-3. `train_epoch`: 학습 함수
-4. `eval_model`: 평가 함수
+- **`NaverShoppingDataset`**: Custom dataset class for handling review data.
+- **`GRUClassifier`**: GRU-based text classification model.
+- **`train_epoch`**: Function to train the model for one epoch.
+- **`eval_model`**: Function to evaluate the model's performance.
 
-## 성능
+## 📊 Performance
 
-테스트 세트에서의 정확도와 손실을 출력합니다.
+The model's accuracy and loss on the test set will be reported to evaluate its effectiveness.
